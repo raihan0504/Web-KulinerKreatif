@@ -1,92 +1,93 @@
 # KulinerKreatif
 
-Membangun sebuah Sistem Manajemen Kuliner Kreatif dengan menggunakan framework Laravel dan Tailwind CSS dapat dibagi menjadi beberapa tahap. Sistem ini juga akan memiliki dua peran: Pengguna dan admin. Setiap peran akan memiliki fungsionalitas spesifik yang disesuaikan dengan kebutuhan mereka.
+KulinerKreatif adalah sebuah Sistem Manajemen Kuliner yang dibangun menggunakan framework Laravel dan Tailwind CSS. Sistem ini bertujuan untuk menyediakan platform bagi pengguna untuk mencari, berbagi, dan berinteraksi dengan resep kuliner kreatif. Terdapat 2 peran utama dalam sistem ini: Pengguna dan admin, masing-masing dengan fungsionalitas spesifik yang disesuaikan dengan kebutuhan mereka.
 
-## Fitur
+## Fitur Utama
 
-### Peran Pengguna
-- *Melihat Resep*: Pengguna dapat melihat resep makanan baik sudah login maupun tidak.
-- *Komentar*: Pengguna dapat memberikan komentar pada tiap resep.
+### Pengguna
+- Registrasi dan Login
+- Pencarian dan Penelusuran Resep
+- Komentar dan Review
 
-### Peran Admin
-- *Manajemen resep*: Admin dapat melihat, mengedit dan menghapus resep yang ada.
-- *Melihat Dashboard*: Admin dapat melihat seberapa banyak resep yang telah dibuat.
-- *Menambah Resep*: Admin dapat menambahkan resep.
+### Admin
+- Manajemen Resep
+- Menambah Resep
+- Analitik Resep
 
 ## Instalasi
 
-Untuk menginstal dan menjalankan proyek ini secara lokal, ikuti langkah-langkah berikut:
+Ikuti langkah-langkah berikut untuk menginstal proyek ini di mesin lokal Anda.
 
-1. *Clone repositori*:
-   bash
-   git clone https://github.com/asans22/Sistem-Manajemen-klinik.git
-   cd sistem-manajemen-klinik
-   
+### Prasyarat
 
-2. *Instal dependensi*:
-   bash
-   composer install
-   npm install
-   
+Pastikan Anda telah menginstal:
+- PHP >= 7.3
+- Composer
+- Node.js & npm
+- MySQL
 
-3. *Salin file environment contoh dan konfigurasikan variabel lingkungan Anda*:
-   bash
-   cp .env.example .env
-   
+### Langkah-langkah Instalasi
 
-4. *Generate kunci aplikasi*:
-   bash
-   php artisan key:generate
-   
+1. **Clone Repository**
+    ```bash
+    git clone https://github.com/raihan0504/Web-KulinerKreatif.git
+    cd kulinerkreatif
+    ```
 
-5. *Jalankan migrasi database*:
-   bash
-   php artisan migrate
-   
+2. **Instal Dependencies**
+    ```bash
+    composer install
+    npm install
+    ```
 
-6. *Seed database (opsional)*:
-   bash
-   php artisan db:seed
-   
-7. *Import database dari file sistem_manajemen_klinik.sql (opsional)*:
-   bash
-   -buka phpmyadmin
-   -import file sistem_manajemen_klinik.sql
-   
+3. **Konfigurasi Environment**
+    Salin file `.env.example` ke `.env` dan sesuaikan konfigurasi database Anda:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
 
-8. *Kompilasi aset*:
-   bash
-   npm run dev
-   
+4. **Migrasi Database**
+    Buat dan migrasikan tabel database:
+    ```bash
+    php artisan migrate
+    ```
 
-9. *Mulai server pengembangan lokal*:
-   bash
-   php artisan serve
-   
+5. **Jalankan Server Pengembangan**
+    ```bash
+    php artisan serve
+    npm run dev
+    ```
 
 ## Penggunaan
 
-Setelah menyelesaikan langkah-langkah instalasi, Anda dapat mengakses aplikasi di http://localhost:8000. Bergantung pada peran yang diberikan kepada akun Anda, Anda akan memiliki akses ke fungsionalitas yang berbeda seperti yang dijelaskan di atas.
+Setelah instalasi, Anda dapat mengakses aplikasi pada `http://localhost:8000`. Daftar sebagai pengguna, dan Anda akan dapat menjelajahi resep-resep kuliner kreatif. Admin dapat mengakses panel admin untuk mengelola resep.
 
 ## Kontribusi
 
-Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
+Kami menerima kontribusi dari siapa saja yang tertarik untuk meningkatkan proyek ini. Berikut adalah cara Anda dapat berkontribusi:
 
-1. Fork repositori.
-2. Buat branch baru (git checkout -b fitur/FiturAnda).
-3. Commit perubahan Anda (git commit -am 'Tambahkan fitur baru').
-4. Push ke branch (git push origin fitur/FiturAnda).
-5. Buat Pull Request baru.
+1. **Fork Repository Ini**
+2. **Buat Branch Fitur**
+    ```bash
+    git checkout -b fitur-baru
+    ```
+3. **Commit Perubahan Anda**
+    ```bash
+    git commit -m 'Tambah fitur baru'
+    ```
+4. **Push ke Branch**
+    ```bash
+    git push origin fitur-baru
+    ```
+5. **Buat Pull Request**
 
-## Team members:
-1. Ahmad Syah Ramadhan 2208107010033
-2. Agil Mughni 2208107010025
 
 
 ## Kontak
 
-Untuk pertanyaan atau saran, silakan hubungi saya di [ahmadsyahrmdn@gmail.com] atau rekan saya [agilmughni1@gmail.com].
+Jika Anda memiliki pertanyaan atau masukan, silakan hubungi kami di mhd.raihan0504@gmail.com dan cutdahliana0@gmail.com.
 
 ---
 
-README ini memberikan gambaran umum tentang Sistem Manajemen Klinik, instruksi instalasi, dan detail tentang cara menggunakan dan berkontribusi pada proyek ini. Jika Anda memiliki pertanyaan tambahan atau memerlukan bantuan lebih lanjut, jangan ragu untuk menghubungi saya.
+Terima kasih telah menggunakan KulinerKreatif!
