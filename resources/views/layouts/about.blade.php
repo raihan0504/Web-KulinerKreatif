@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="About KulinerKreatif">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Menggunakan directive @vite untuk menyertakan file CSS -->
     @vite('resources/css/app.css')
     <title>About - KulinerKreatif</title>
 </head>
@@ -61,8 +60,6 @@
             </div>
         </div>
     </main>
-
-    <!-- Menggunakan directive @vite untuk menyertakan file JavaScript -->
     @vite('resources/js/app.js')
 
     <!-- Footer -->
