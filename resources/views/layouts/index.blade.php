@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Selamat datang di KulinerKreatif, tempat Anda menemukan resep kuliner yang kreatif dan lezat setiap hari.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Menggunakan directive @vite untuk menyertakan file CSS -->
     @vite('resources/css/app.css')
     <title>KulinerKreatif</title>
 </head>
 
 <body class="bg-mainColor text-white tracking-wider overflow-auto backdrop-blur-md" style="background-image: url('{{ asset('assets/food2.jpg') }}')">
+    <!-- Header -->
     <header class="bg-headerColor">
+        <!-- Navigasi -->
         <nav class="container flex justify-between items-center py-4 px-5">
+            <!-- Logo dan Form Pencarian -->
             <div class="w-20 text-orange font-bold text-3xl flex items-center gap-4">
                 <a href="/" class="flex items-center">
                     <span class="text-white">Kuliner</span>Kreatif
@@ -22,10 +26,13 @@
                     <input onkeydown="search(event)" id="search" placeholder="Cari" name="cari" type="text" class=" placeholder:text-[#b3b3b3] w-[360px] bg-white/0 rounded-2xl text-[16px] px-2 font-medium text-white focus:outline-none border border-white">
                 </form>
             </div>
+
+            <!-- Menu Navigasi -->
             <div>
                 <ul class="flex items-center space-x-6">
                     <li><a href="/" class="hover:text-blue ease-in duration-200">Home</a></li>
                     <li><a href="/about" class="hover:text-blue ease-in duration-200">About</a></li>
+                    <!-- Kondisi untuk menampilkan link Login atau Logout -->
                     @guest
                     <li><a href="/login" class="bg-blue px-9 py-3 rounded-md capitalize font-bold hover:opacity-80 ease-in duration-200">Login</a></li>
                     @else
@@ -41,7 +48,9 @@
         </nav>
     </header>
 
+    <!-- Konten Utama -->
     <main>
+        <!-- Bagian Home dengan latar belakang gambar -->
         <section id="Home" class="bg-cover bg-center h-[90vh]" style="background-image: url('{{ asset('assets/food2.jpg') }}')">
             <div class="container py-20">
                 <div class="flex items-center justify-start z-20 md:flex-row">
@@ -57,10 +66,11 @@
             </div>
         </section>
 
-        {{-- Resep --}}
+        <!-- Bagian Resep -->
         <section class="container mx-auto py-8 px-4" >
            <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Looping untuk menampilkan setiap resep -->
                     @foreach ($recipe as $resep)
                         <div class="bg-white text-black rounded-lg shadow-md overflow-hidden">
                             <a href="{{ route('recipes.tampil', $resep->id)}}" >
@@ -75,9 +85,10 @@
            </div>
         </section>
     </main>
+    <!-- Menyertakan file JavaScript -->
     <script src="{{asset('js/index.js')}}"></script>
 
-    {{-- footer --}}
+    <!-- Footer -->
     <footer class="bg-mainColor text-white">
         <div class="w-full mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
             <span class="block text-center w-full">
