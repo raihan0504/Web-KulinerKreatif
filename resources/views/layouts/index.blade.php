@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Selamat datang di KulinerKreatif, tempat Anda menemukan resep kuliner yang kreatif dan lezat setiap hari.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Menggunakan directive @vite untuk menyertakan file CSS -->
     @vite('resources/css/app.css')
     <title>KulinerKreatif</title>
 </head>
