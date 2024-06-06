@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Login ke akun KulinerKreatif Anda untuk mengakses resep favorit dan fitur eksklusif.">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Menggunakan directive @vite untuk menyertakan file CSS -->
     @vite('resources/css/app.css')
     <title>Login - KulinerKreatif</title>
 </head>
